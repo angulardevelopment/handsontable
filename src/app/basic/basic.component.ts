@@ -5,10 +5,9 @@ import Handsontable from 'handsontable';
 import * as XLSX from 'xlsx';
 
 @Component({
-  selector: 'app-basic',
-  templateUrl: './basic.component.html',
-  styleUrls: ['./basic.component.scss'],
-  standalone: false
+    selector: 'app-basic',
+    templateUrl: './basic.component.html',
+    styleUrls: ['./basic.component.scss']
 })
 export class BasicComponent implements AfterViewInit {
   dataset = [];
@@ -31,7 +30,7 @@ export class BasicComponent implements AfterViewInit {
     const container = document.querySelector('#example1');
     const save = (document.querySelector('#save') as HTMLButtonElement);
 
-    const hot = new Handsontable(container, {
+    const hot = new Handsontable(container as HTMLElement, {
 
 
       licenseKey: 'non-commercial-and-evaluation',
